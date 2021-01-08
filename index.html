@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="card">
+        <form class="cal-head">
+             <input type="text" id="result" placeholder="0" disabled>
+        </form>
+        <div class="cal-body">
+            <div>
+                <input type="button" class="btn" value="C" onclick="result.value = null">
+                <input type="button" class="btn" value="&radic;" onclick="result.value = Math.sqrt(result.value)">
+                <input type="button" class="btn" value="%" onclick="result.value = (result.value/100)">
+                <input type="button" class="btn btn2" value="/" onclick="InsertData(this.value)">
+            </div>
+
+            <div>
+                <input type="button" class="btn" value="7" onclick="InsertData(7)">
+                <input type="button" class="btn" value="8" onclick="InsertData(8)">
+                <input type="button" class="btn" value="9" onclick="InsertData(9)">
+                <input type="button" class="btn btn2" value="x" onclick="InsertData('*')">
+            </div>
+
+            <div>
+                <input type="button" class="btn" value="4" onclick="InsertData(4)">
+                <input type="button" class="btn" value="5" onclick="InsertData(5)">
+                <input type="button" class="btn" value="6" onclick="InsertData(6)">
+                <input type="button" class="btn btn2" value="-" onclick="InsertData(this.value)">
+            </div>
+
+            <div>
+                <input type="button" class="btn" value="1" onclick="InsertData(1)">
+                <input type="button" class="btn" value="2" onclick="InsertData(2)">
+                <input type="button" class="btn" value="3" onclick="InsertData(3)">
+                <input type="button" class="btn btn2" value="+" onclick="InsertData(this.value)">
+            </div>
+
+            <div>
+                <input type="button" class="btn" value="0" onclick="InsertData(0)">
+                <input type="button" class="btn" value="." onclick="InsertData(this.value)">
+                <input type="button" class="btn" value="&larr;" onclick="result.value = result.value.slice(0,-1)">
+                <input type="button" class="btn" value="=" style="color: red;" onclick="result.value = eval(result.value)">
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+
+<script src="index.js"></script>
+
+
+</html>
